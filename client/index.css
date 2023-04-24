@@ -1,0 +1,28 @@
+body {
+     display: flex;
+     margin: 1.5rem;
+     height: 100vh; 
+     background-color: #f1f1f1;
+   }
+
+input {
+     display: flex;
+     margin: 0 auto;
+   }
+
+label {
+     display: flex;
+     margin: 0 auto;
+   }
+
+select {
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font-family: cursive, sans-serif;
+    outline: 0;
+    background: #2ecc71;
+    color: #fff;
+    border: 1px solid crimson;
+    padding: 4px;
+    border-radius: 9px;
+}
