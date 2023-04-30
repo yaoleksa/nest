@@ -1,6 +1,1 @@
-document.getElementById('size').addEventListener('change', (event) => {
-  console.log(event.target.value);
-});
-document.getElementById('submit').addEventListener('click', () => {
-  console.log('?');
-});
+axios.get('https://youtube.com');
