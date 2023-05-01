@@ -6,10 +6,16 @@ document.getElementById('submit').addEventListener('click', () => {
     .post(window.navigation.currentEntry.url, {
       url: document.getElementById('url').value,
     })
-    .then((data) => {
-      output.innerText = count.toString();
+    .then((response) => {
+      const w = document.getElementById('waiting');
+      output.style.display = 'none';
+      w.style.display = '';
+      w.innerText = 'Wait, converting in proggress...';
       setTimeout(() => {
-        output.innerText = `converted website: ${data.data}`;
+        w.style.display = 'none';
+        output.style.display = '';
+        output.innerText = 'converted website';
+        output.href = response.data;
       }, 5000);
     });
 });
