@@ -19,3 +19,7 @@ document.getElementById('submit').addEventListener('click', () => {
       }, 5000);
     });
 });
+
+if(/android|iphone|kindle|ipad/i.test(navigator.userAgent)){
+  output.setAttribute('target', '_self');
+}
