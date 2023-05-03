@@ -14,12 +14,11 @@ document.getElementById('submit').addEventListener('click', () => {
       setTimeout(() => {
         w.style.display = 'none';
         output.style.display = '';
+        if(/android|iphone|kindle|ipad/i.test(navigator.userAgent)){
+          output.setAttribute('download', '');
+        }
         output.innerText = 'converted website';
         output.href = response.data;
       }, 5000);
     });
 });
-
-if(/android|iphone|kindle|ipad/i.test(navigator.userAgent)){
-  output.setAttribute('target', '_self');
-}
