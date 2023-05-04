@@ -16,6 +16,7 @@ document.getElementById('submit').addEventListener('click', () => {
         output.style.display = '';
         if(/android|iphone|kindle|ipad/i.test(navigator.userAgent)){
           output.setAttribute('download', '');
+          output.setAttribute('target', '_self');
         }
         output.innerText = 'converted website';
         output.href = response.data;
