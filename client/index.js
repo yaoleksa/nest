@@ -1,10 +1,11 @@
-let output = document.getElementById('output');
+const output = document.getElementById('output');
+const url = document.getElementById('url');
 let count = 0;
 
 document.getElementById('submit').addEventListener('click', () => {
   axios
     .post(window.navigation.currentEntry.url, {
-      url: document.getElementById('url').value,
+      url: url.value,
     })
     .then((response) => {
       const w = document.getElementById('waiting');
@@ -22,4 +23,8 @@ document.getElementById('submit').addEventListener('click', () => {
         output.href = response.data;
       }, 5000);
     });
+});
+
+document.getElementById('clear').addEventListener('click', () => {
+  url.value = '';
 });

@@ -5,8 +5,15 @@ body {
 
 #input {
      display:inline-block;
+     width: 100%;
 }
-#submit{
+#clear {
+  margin-left: 0rem;
+}
+#url {
+  width: 40%;
+}
+.buttons {
   background-color: #fa574b;
   color: #fff;
   margin-left: -1rem;
